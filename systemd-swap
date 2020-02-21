@@ -310,7 +310,7 @@ case "$1" in
           if YN "${swapfc_directio}"; then
             losetup -f --show --direct-io=on  "${file}"
           else
-            losetup -f --show --direct-io=off "${file}"
+            losetup -f --show "${file}"
           fi
           # loop uses file descriptor, the file still exists,
           # but does not have a path like O_TMPFILE
